@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheApostlePaul</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS for hover-triggered dropdown -->
+    <style>
+      header{
+        border-bottom: 1px solid #3502ff;
+        
+      }
+      header:hover{
+        border-bottom:3px solid #3502ff;
+      }
+      
+        
+      
+      body {
+      /* Set the background image URL */
+      background-image: url("");
+      background-color: #d8d8d8;
+      
+      
+      /* Set the background attachment to fixed */
+      background-attachment: fixed;
+      
+      /* Optional: Adjust background positioning and sizing */
+      background-position: center;
+      background-size: cover;
+      
+      /* Optional: Set a background color as a fallback */
+      background-color: #f1f1f1;
+    }
+      /*Start of header code*/
+        /* Custom CSS to show dropdown on hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            animation: fadeInDown 0.9s;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Custom CSS for orange padding on the left */
+        header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Set a high z-index to keep the header on top of other elements */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.335); /* Add the shadow effect */
+    transition: border 0.3s ease;
+  }
+  @keyframes rollColor {
+    0% {
+      background-color: #fbfbfb;
+    }
+    25% {
+      background-color: #fbfbfbdc;
+    }
+    50% {
+      background-color: #fbfbfb89;
+    }
+    75% {
+      background-color: #fbfbfb39;
+    }
+    100% {
+      background-color: #fbfbfb00;
+      /*animation: rollColor 5s linear infinite;*/
+    }
+  }
+        .dropdown-menu {
+            padding-left: 20px;
+            background-color: rgba(227, 227, 227, 0);
+            border-radius: 0px;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.43);
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: transform 0.7s ease-in-out, margin-left 0.7s ease-in-out;
+            margin-left: -10px;
+            opacity: 0;
+            color: #050505;
+            backdrop-filter: blur(5px);
+        }
+        .dropdown-item{
+          max-width: 90%;
+          margin-right:20px;
+          margin-bottom:5px;
+          height:30px;
+          background-color: rgba(255, 255, 255, 0.457);
+          border-radius: 8px;
+          border:1px solid black;
+          
+          
+        }
+        .dropdown-item:hover{
+            
+            background-color: #ffffff;
+            text-decoration: rgba(7, 7, 7, 0.268) underline;
+      transition: 500ms;
+            
+        }
+          /*text-decoration:  rgba(7, 7, 7, 0.268) underline;*/
+        .dropdown:hover .dropdown-menu {
+            transform: scaleY(1);
+            margin-left: 0;
+            opacity: 1;
+        }
+
+        /* Custom CSS for yellow margin on the outside left */
+        .dropdown-menu::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            background-color:#3502ff;
+            transform: scaleX(0);
+            transition: transform 1000ms ease-in-out;
+        }
+
+        .dropdown:hover .dropdown-menu::before {
+            transform: scaleX(1);
+        }
+        /*end of header code*/
+        /*Start of Layout code*/
+        .container {
+      display: flex;
+    }
+
+    .side-nav {
+            height:900px;
+            z-index: 1000;
+            width: 250px;
+            border-radius: 0px;
+            background-color: #ffffff34;
+            padding: 20px;
+            position: fixed;
+            top: 55px;
+            left: -250px; /* Initially hide the aside */
+            border-right: 1px solid #3502ff;
+            border-top: 1px solid #3d3d3d;
+            transition: left 0.7s ease-in-out;
+            backdrop-filter: blur(5px);
+            box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.3);
+        }
+        .side-nav:hover{
+          border-right: 5px solid #3502ff;
+          transition: left 0.9s ;
+          box-shadow: 14px 0px 14px rgba(0, 0, 0, 0.5);
+        }
+        #slideButton {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #b7b7b7;
+            color: white;
+            padding: 10px;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+        #slideButton:hover {
+          background-color: #cfcfcf;
+        } 
+        @media (max-width: 768px) {
+            #slideButton {
+                display: none;
+            }
+        }
+        
+        #mainContent {
+            width: calc(); /* Adjust for the aside width */
+            margin-left: 20px; /* Match the aside width */
+            padding-left: 15px;
+            padding-right: 5px;
+        }
+
+    .side-nav h2 {
+      margin-top: 0;
+    }
+
+    .side-nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .side-nav li {
+      margin-bottom: 10px;
+    }
+
+    .side-nav a {
+      color: #5c5c5c;
+      text-decoration: none;
+    }
+    .navtextbox{
+      overflow:auto;
+      margin-top:8px;
+      margin-bottom: 8px;
+      padding-bottom:4px;
+      padding-top: 4px;
+      width:100%;
+      background-color: #ffffff89;
+      padding-left:3px;
+      height:fit-content;
+      border:1px solid #050505;
+      border-radius: 8px;
+      
+      text-align: center;
+      
+
+    }
+    .navtextbox:hover{
+      background-color: #ffffff;
+      transition:500ms;
+      
+      
+      
+    }
+
+    .side-nav a:hover {
+      color: #050505;
+      text-decoration: rgba(7, 7, 7, 0.268) underline;
+      transition: 500ms;
+      
+      text-shadow: #333;
+    }
+
+    main {
+        width:auto;
+      margin-top: 50px;
+      margin-left: 200px; /* Width of the side navigation */
+      padding-left: 15px;
+      padding-right: 5px;
+    }
+    /*boxes for main content*/
+    /*Heading box*/
+    
+    .box01{
+      width: 100%;
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:20px;
+      padding-bottom:15px;
+      border-bottom:solid 1px #3502ff;
+      margin-bottom: 35px;
+      text-align: left;
+      
+    }
+    .box01Main{
+      width: 100%;
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:20px;
+      padding-bottom:15px;
+      border-bottom:solid 1px #3502ff;
+      margin-bottom: 35px;
+      text-align: center;
+      
+    }
+    /*box for what I say*/
+    .box02{
+      font-size: 16px;
+      width: 100%;
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:15px;
+      padding-bottom:15px;
+      
+      text-align: left;
+    }
+    .box02gospel{
+      font-size: 16px;
+      width: 100%;
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:15px;
+      padding-bottom:15px;
+      
+      text-align: center;
+    }
+    .box02borderleft{
+      font-size: 15px;
+      width: 100%;
+      padding-left:40px;
+      padding-right:50px;
+      padding-top:15px;
+      padding-bottom:15px;
+      border-left:5px solid rgb(96, 96, 96);
+      text-align: left;
+      margin-left:20px;
+      margin-bottom:30px;
+    }
+    
+    .box02borderright{
+      font-size: 15px;
+      width: 100%;
+      padding-left:40px;
+      padding-right:0px;
+      padding-top:15px;
+      padding-bottom:15px;
+      border-right:5px solid rgb(96, 96, 96);
+      text-align: left;
+      margin-right:-50px;
+      margin-bottom:30px;
+    }
+    
+    /*box for verse */
+    .boxverseleft{
+      Width:100%;
+      background-color: #cecece22;
+      border-right:1px solid #3502ff;;
+      margin-left:40px;
+      padding:10px;
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px;
+      margin-bottom:10px;
+      margin-top:10px;
+    }
+    .boxverseright{
+      Width:100%;
+      background-color: #cecece22;;
+      border-left:1px solid #3502ff;;
+      margin-right:40px;
+      padding:10px;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      margin-bottom:10px;
+    }
+
+    .box03{
+      width: 100%;
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:0px;
+      padding-bottom:0px;
+      margin-bottom:0px;
+      color: #3d3d3d;
+      text-align:left;
+      font-size: larger;
+    }
+    .box03b{
+      margin-bottom:30px;
+      width: 100%;
+      padding:20px;
+      color: black;
+      text-align:center;
+      border-radius: 10px;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.507);
+      border: 1px solid #3d3d3d;
+    }
+    /*Box for verse content*/
+    .box04{
+      font-size: 15px;
+      width: 100%;
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:0px;
+      padding-bottom:0px;
+      margin-top:0px;
+     
+    }
+    .box04b{
+      background-color: #8d8d8d;
+      font-size: 18px;
+      width: 100%;
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:10px;
+      padding-bottom:10px;
+      margin-bottom:30px;
+      border: 2px solid black;
+    }
+    .box05{
+      font-size: 18px;
+      width: 100%;
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:10px;
+      padding-bottom:30px;
+     
+    }
+    .box06{
+      font-size: 18px;
+      width: 100%;
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:10px;
+      padding-bottom:30px;
+      text-align: center;
+
+    }
+    .box07{/*this is the box for the carousel*/
+      width: 100%;
+      padding-left:110px;
+      padding-right:0px;
+      padding-top:20px;
+      padding-bottom:15px;
+      border-bottom:solid 1px #b4b4b4;
+      
+      text-align: left;
+      
+    }
+    .button001{
+      display: inline-block;
+            padding: 8px 16px;
+            background-color: #dddddd00;
+            color: #8d8d8d;
+            text-decoration: none;
+            border-radius: 360px;
+            border:1px solid #8d8d8d;
+            
+            margin-top: 20px;
+    }
+    .button001:hover {
+            transition:750ms;
+            background-color: #e1e1e1; /* You can change the color on hover */
+            text-decoration: none;
+            color: #050505;
+          }
+          .button002{
+            align-self:center;
+            display:inline-block;
+            padding: 8px 16px;
+            background-color: #dddddd00;
+            color: #8d8d8d;
+            text-decoration: none;
+            border-radius: 360px;
+            border:1px solid #8d8d8d;
+            
+            margin-top: 20px;
+    }
+    .button002:hover {
+            transition:750ms;
+            background-color: #e1e1e1; /* You can change the color on hover */
+            text-decoration: none;
+            color: #050505;
+          }
+
+    
+
+    footer {
+      background-color: #dedede;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    
+
+    /* Media Query for Mobile Devices */
+    @media screen and (max-width: 768px) {
+      .side-nav {
+        display: none;
+      }
+      main {
+        margin-left: 0;
+        padding: 0;
+        max-width: 90%;
+      }
+    }
+    
+    .transparent-box {
+      font-size: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start; /* Center the items horizontally */
+    justify-content:space-between; /* Center the items vertically */
+}
+
+
+.transparent-box p {
+    margin-bottom: 0;
+}
+
+.transparent-box img {
+    
+    margin-top: 6px;
+    max-width: 30px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+    /*Layout code end*/
+    @media (max-width: 768px) {
+      .image-box {
+        max-width: 90%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image-box img {
+
+        width: 200px;
+        height: 155px;
+        margin: 5px;
+      }
+    }
+    
+    .image-box {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left:30px;
+    }
+
+    .image-box img {
+      width: 400px;
+      height: 300px;
+      margin: 10px;
+      cursor: pointer;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.507);
+      border-radius: 6px;
+    }
+
+    .image-box a {
+      text-decoration: none;
+      color: #050505;
+      display: block;
+      text-align: center;
+    }
+    .image-box a:hover{
+      color: #333;
+      text-decoration: underline;
+    }
+    .image-box img:hover{
+      border:2px solid rgb(98, 98, 98);
+      transition: 1000ms;
+    }
+    #overlay1 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+        }
+/*code for the carousel*/
+.carousel-container {
+      z-index: 500;
+      max-width: 1200px; /* Customize the container width */
+      margin: 20px auto;
+      padding: 0px;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.507);
+      border-radius: 10px;
+    }
+
+    /* Center the carousel within the container */
+    .carousel-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .carousel {
+      width: 100%;
+      max-width: 1200px; /* Customize the carousel width */
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Customize the carousel item height */
+    .carousel-item {
+      height: 500px;
+    }
+
+    /* Style the carousel images */
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      /* Add any other image styles you desire */
+    }
+
+    /* Style the carousel active indicator */
+    .carousel-indicators .active {
+      background-color: #333333; /* Customize the active indicator color */
+    }
+
+    /* Style the carousel caption */
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.343); /* Customize the background color and transparency */
+      color: #fff; /* Customize the text color */
+      border-radius: 5px;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .carousel-caption:hover{
+      background-color: rgba(0, 0, 0, 0.49);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+        
+
+        
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="top" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <!-- ... Your header content ... -->
+  </header>
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="TheGospelMainPage.html">Why Pauls Gospel</a>
+
+            <!-- Toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="TheGospelMainPage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The Apostle Paul.html">The Apostle Paul</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Reading.html">Reading</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="TheKingJames.html">The King James Bible</a>
+                            <a class="dropdown-item" href="#">Kingdom Gospel Saints</a>
+                            <a class="dropdown-item" href="#">Acts is not ours</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="webpage001 navandcarousel.html">About us</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Menu
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">No Gifts</a>
+                          <a class="dropdown-item" href="#">Fulness of times</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Grace of God</a>
+                      </div>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </header>
+    <!--Start of Body-->
+    
+    
+    <div class="container">
+
+        <button id="slideButton">&#9776;</button> <!-- Button to slide out the aside -->
+        <aside class="side-nav">
+            <!-- Your navigation links can go here -->
+            <ul>
+                <div class="navtextbox"><li><a href="#section1">The Gospel</a></li></div>
+          <div class="navtextbox"><li><a href="#section2">Saved from what</a></li></div>
+          <div class="navtextbox"><li><a href="#section3">Who is God.</a></li></div>
+          <div class="navtextbox"><li><a href="#section4">The results for believing</a></li></div>
+          <div class="navtextbox"><li><a href="#section5">I am saved what next?</a></li></div>
+          
+          
+                <!-- ... (navigation links) ... -->
+            </ul>
+        </aside>
+
+        <main id="mainContent">
+            <!-- Content for the main section -->
+            <!-- ... (content) ... -->
+            <section id="section1">
+                <div class="box01Main"><h1>The Apostle Paul</h1></div>
+                <div class="box02gospel"><h6>TThis is the gospel that Paul was given by revelation of Jesus Christ.</h6></div>
+                <div class="boxverseright"><h4>1 Corinthians 15:1-4 KJV</h4><p> Moreover, brethren, I declare unto you the gospel which I preached unto you, which also ye have received, and wherein ye stand;
+                     By which also ye are saved, if ye keep in memory what I preached unto you, unless ye have believed in vain.
+                     For I delivered unto you first of all that which I also received, how that Christ died for our sins according to the scriptures;
+                      And that he was buried, and that he rose again the third day according to the scriptures:</p></div>    
+            </section>
+            <section id="section2">
+                <div class="box01Main"><h2>Why you need to be saved.</h2></div>
+                <div class="box02gospel"><p>Every person today is a sinner, we all need to be forgiven of our sins, we need Christ to save us.  If a person dies without believing the gospel they will die still in their sins and the results are written in 2 Thessalonians 1:8-9 KJV below.</p></div>
+                <div class="boxverseright"><h4>2 Thessalonians 1:8-9 KJV</h4><p> In flaming fire taking vengeance on them that know not God, and that obey not the gospel of our Lord Jesus Christ:
+                    Who shall be punished with everlasting destruction from the presence of the Lord, and from the glory of his power;</p><h4>2 Corinthians 5:10 KJV</h4><p>For we must all appear before the judgment seat of Christ; that every one may receive the things done in his body, according to that he hath done, whether it be good or bad.</p> <h4>Romans 2:16 KJV</h4><p>In the day when God shall judge the secrets of men by Jesus Christ according to my gospel.</p></div>
+                  <div class="box02gospel"><p>We cannot gain our way to heaven, doing good works or being a good person, otherwise it is not grace as Paul writes in the scriptures</p></div>
+                  <div class="boxverseright"><h4>Ephesians 2:8-9 KJV</h4><p>For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:
+                    , lest any man should boast.</p><h4>2 Corinthians 9:15 KJV</h4><p> Thanks be unto God for his unspeakable gift.</p></div>
+                </section>
+
+            <section id="section3">
+                <div class="box01Main"><h2>Who is God?</h2></div>
+                <div class="box02gospel"><h5>Christ is God and He is that Spirit.  He is the creater of all things in heaven and in earth.</h5></div>
+                <div class="box02gospel"><p>Many people today do not know the truth about who God is, You need to know that there is no trinity, he doesn't become a piece of bread and he is not a failed prophet or lucifers brother.</p></div>    
+                <div class="boxverseright"><h4>Titus 2:13 KJV</h4><p>Looking for that blessed hope, and the glorious appearing of the great God and our Saviour Jesus Christ;</p><h4>2 Corinthians 3:17 KJV</h4><p>Now the Lord is that Spirit: and where the Spirit of the Lord is, there is liberty.</p></div>
+                
+                
+            </section>
+
+            <section id="section4">
+                <div class="box01Main"><h2>What happens if you believe.</h2></div>
+                <div class="box02gospel"><h5>Forgiven, Saved and sealed, God cannot lie, He promised eternal life.</h5></div>
+                <div class="box02gospel"><p>If you believe the gospel you will be saved and sealed, which means you cannot lose your salvation once you have believed the gospel, God cannot lie He promised eternal life. When a person is saved they are forgiven for all their sins and will know that they are saved because Christ will come to live in them and when they die they will be caught up to meet the Lord Jesus Christ in the air and spend eternity in the heavenly places.</p></div>
+                <div class="boxverseright"><h4>Colossians 2:13 KJV</h4><p>And you, being dead in your sins and the uncircumcision of your flesh, hath he quickened together with him, having forgiven you all trespasses; </p><h4>Ephesians 2:6 KJV</h4><p>And hath raised us up together, and made us sit together in heavenly places in Christ Jesus:</p><h4>Colossians 1:27 KJV</h4><p>To whom God would make known what is the riches of the glory of this mystery among the Gentiles; which is Christ in you, the hope of glory:</p>
+                  <h4>Titus 1:2 KJV</h4><p>In hope of eternal life, which God, that cannot lie, promised before the world began;</p></div>
+                
+            </section>
+
+            <section id="section5">
+                <div class="box01Main"><h2>I am saved what next?</h2></div>
+                <div class="box02gospel"><h4>Read Daily</h4><p>In order for a believer to know what God wants them to do, they need to read daily so they can grow in the knowledge of what God gave to Paul 2000 years ago.</p></div>
+                <div class="box02gospel"><h4>Paul's letters only.</h4><p>Paul's scriptures are the final authority when it comes to doctrine, Paul's gospel is the only way to be saved today and its his words given to him from God that will give every believer today the knowledge of how to walk and please Christ.  Here on Why Paul's Gospel we have compiled all the reasons as to why the King James Version is the only bible to be used and why Paul's letters from Romans to Philemon are for anyone who is saved today.  We show why nothing else in the bible is for anyone who is saved today.</p>
+                  </div>
+                  <div class="box02gospel"><h4>You are saved?</h4><p>If you are saved today this website has been set up for you, we have compiled information from the scriptures and from our experience as a believer the reasons to reading Paul's scriptures daily and the benefits of doing so.  Keep in mind that all information comes from the scriptures that Christ Jesus gave to Paul, all other information provided outside of that is to show you the user as to why Paul's 13 letters in the King James Version is the only scriptures that can be trusted when it comes to doctrine.  Please Click continue below to learn more about reading Paul's 13 letters daily.</p>
+                    <a href="Reading.html" class="button002">Continue</a></div>
+                
+              </section>
+              <section id="section6">
+                <div class="image-box">
+                  <a href="TheKingJames.html">
+                    <img src="bible1.jpg" alt="Image 1">
+                    <p>Why you should not to go to church</p>
+                  </a>
+                  <a href="page2.html">
+                    <img src="bible2.jpg" alt="Image 2">
+                    <p>The Importance of Reading</p>
+                  </a>
+                  <a href="page3.html">
+                    <img src="dawn breaking.jpg" alt="Image 3">
+                    <p>The Apostle Paul</p>
+                  </a>
+                  <a href="page3.html">
+                      <img src="skyview.jpg" alt="Image 3">
+                      <p>The 2 groups of believers</p>
+                    </a>
+                  <!-- Add more images and links as needed -->
+                </div>
+              </section>
+        </main>
+    </div>
+
+
+    <!--end of Body-->
+    
+  <footer class="footer mt-auto py-3 bg-dark gray text-black">
+    <div class="container text-center">
+        <div class="row">
+            <!-- Transparent Box 1 -->
+            <div class="col-md-6 mb-3">
+                <div class="transparent-box">
+                    <p>WhyPaulsGospel.com is affiliated with no other religious groups, churches, cults, sects, websites, teachers and pastors online or otherwise,
+                        We do not condone the use of any other content outside of Paul's scriptures for doctrine, be it books, videos, sermons or audiofiles or any religous music of any kind
+                        We strictly use Paul's scriptures in the King James Version only for doctrine and for individuals who are saved today to know how they can walk and please God.  For more information on our policies visit the Our policies page.
+                    </p>
+                    
+                </div>
+            </div>
+            
+
+            <!-- Transparent Box 2 -->
+            <div class="col-md-6">
+                <div class="transparent-box">
+                    
+                    <a href="#" class="logo-link"><img src="facebooklogo.png" alt="Logo 1"></a>
+                    <a href="#" class="logo-link"><img src="linkedinlogo.png" alt="Logo 2"></a>
+                    <a href="#" class="logo-link"><img src="paltalk logo.png" alt="Logo 2"></a>
+                    <a href="#" class="logo-link"><img src="youtube.jpg" alt="Logo 2"></a>
+                    <a href="#" class="logo-link"><img src="skypelogo.png" alt="Logo 2"></a>
+                    <a href="#" class="logo-link"><img src="discordlogo.png" alt="Logo 2"></a>
+                    <a href="#" class="logo-link"><img src="email.jpg" alt="Logo 2"></a>
+                    <!-- Add more logo links as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const slideButton = document.getElementById('slideButton');
+        const sideNav = document.querySelector('.side-nav');
+
+        slideButton.addEventListener('mouseenter', () => {
+            sideNav.style.left = '0';
+        });
+
+        sideNav.addEventListener('mouseleave', () => {
+            sideNav.style.left = '-250px';
+        });
+    </script>
+
+
+</body>
+
+</html>
