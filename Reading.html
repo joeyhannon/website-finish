@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>The Gospel </title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -24,6 +25,9 @@
       /* Set the background image URL */
       background-image: url("");
       background-color: #d8d8d8;
+       overflow-x: hidden;
+      margin: 0;
+      padding: 0;
       
       
       /* Set the background attachment to fixed */
@@ -473,6 +477,11 @@
       padding: 10px;
       text-align: center;
     }
+    .logo-link img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
     
 
     /* Media Query for Mobile Devices */
@@ -487,15 +496,17 @@
       }
     }
     
-    .transparent-box {
-      font-size: 10px;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 15px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction:row;
-    align-items: flex-start; /* Center the items horizontally */
-    justify-content:space-between; /* Center the items vertically */
+   .transparent-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  word-wrap: break-word;
+}
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 
@@ -627,233 +638,42 @@
 
         
     </style>
-</head>
+    </head>
+    <body>
 
-<body>
-    <!-- Header -->
-    <header id="top" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <!-- ... Your header content ... -->
-  </header>
-    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <!-- Brand/logo -->
-            <a class="navbar-brand" href="TheGospelMainPage.html">Why Pauls Gospel</a>
-
-            <!-- Toggler for mobile view -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navigation links -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="TheGospelMainPage.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Our Policies</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Kingdom Gospel Saints</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">Action 1</a>
-                          <a class="dropdown-item" href="#">Action 2</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Separated link</a>
-                      </div>
-                  </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-    </header>
-    <!--Start of Body-->
-    
-    
-    <div class="container">
-
-        <button id="slideButton">&#9776;</button> <!-- Button to slide out the aside -->
-        <aside class="side-nav">
-            <!-- Your navigation links can go here -->
-            <ul>
-                <div class="navtextbox"><li><a href="#section1">Importantance Of Reading</a></li></div>
-          <div class="navtextbox"><li><a href="#section2">Why The King James?</a></li></div>
-          <div class="navtextbox"><li><a href="#section3">Why Paul?</a></li></div>
-          <div class="navtextbox"><li><a href="#section4">What's Paul's</a></li></div>
-          
-          <div class="navtextbox"><li><a href="#section5">The 2 Groups</a></li></div>
-          <div class="navtextbox"><li><a href="#section6">Reading In Context</a></li></div>
-          
-          
-                <!-- ... (navigation links) ... -->
-            </ul>
-        </aside>
-
-        <main id="mainContent">
-            <!-- Content for the main section -->
-            <!-- ... (content) ... -->
-            <section id="section1">
-                <div class="box01Main"><h1>Reading</h1></div>
-                <div class="box02gospel"><h4>The Importance Of Reading</h4><h6>It is important for anyone who is saved to read everyday.  We know this from what is written in the scriptures that in order for a believer to know what the Lord Jesus Christ needs them to do to walk and please Him.</h6></div>
-                <div class="box02gospel"><h6>Please remember to pay more attention to the scriptures than what I say and to keep in mind that we will use scriptures to back every statement that we make on this website.</h6></div>
-                <div class="boxverseright"><h4>2 Timothy 2:7 KJV</h4><p> Consider what I say; and the Lord give thee understanding in all things.</p>
-                  <h4>Ephesians 3:4 KJV</h4><p>  Whereby, when ye read, ye may understand my knowledge in the mystery of Christ)</p></div> 
-               
-            </section>
-
-            
-            <section id="section2">
-                <div class="box01Main"><h2>Why the King James Version.</h2></div>
-                <div class="box02gospel"><p>God has made his scriptures available to anyone who is saved today.  We can reproof this by what is written in the scriptures.  The King James is the final authority when it comes to the scriptures.  We have compiled information to back this claim up and it is available on the King James Version page on this website.  </p></div>
-                <div class="boxverseright"><h4>Ephesians 3:9 KJV</h4><p>And to make all men see what is the fellowship of the mystery, which from the beginning of the world hath been hid in God, who created all things by Jesus Christ:</p><h4>Colosians 1:18 KJV</h4><p>And he is the head of the body, the church: who is the beginning, the firstborn from the dead; that in all things he might have the preeminence.</p> </div>
-                
-                <div class="boxforbutton"><a href="TheKingJames.html" class="button001">The King James Version</a></div>
-            </section>
-
-            <section id="section3">
-                <div class="box01Main"><h2>Why the apostle Paul?</h2></div>
-                <div class="box02gospel"><p>Paul was the first person to be saved, he was chosen to be our father in the faith.  God gave everything in regards to doctrine to Paul the apostle,  Paul wrote it all down so that any person who believed his gospel could walk and please God. We cover this more on the page The Apostle Paul.</p></div>
-                <div class="box02gospel"><p></p></div>    
-                <div class="boxverseright"><h4>verse</h4><p>verse content.</p></div>
-                <div class="boxforbutton"><a href="Reading.html" class="button001">The Apostle Paul</a></div>
-           
-                
-                
-            </section>
-            <section id="section4">
-              <div class="box01Main"><h2>Which letters are Paul's scriptures for us today?</h2><p>Romans to Philemon are the scriptures that Paul wrote, they have his token which are in all of his epitles, many people today believe that the book of Acts is a reputible source of information about Paul when it is not, we have more on this on the page Why Acts is not ours.</p></div>
-              <div class="boxverseright"><h4>verse</h4><p>verse content.</p>
-                <h4>verse</h4><p>verse content.</p>
-                <h4>verse</h4><p>verse content.</p>
-                <h4>verse</h4><p>verse content.</p></div>
-              <div class="boxforbutton"><a href="Actsisnotours.html" class="button002">Why Acts is not ours</a></div>
-           
-            </section>
-
-            <section id="section5">
-                <div class="box01Main"><h2>The 2 groups of believers.</h2></div>
-                <div class="box02gospel"><h5>People don't know that 2000 years ago there where 2 groups of believers, they where known as Kingdom gospel saints, they had a different gospel and doctrine.  Paul had to write to those believers also and as a result people today try applying doctrine that is not addressed to anyone today, because all of those Kingdom gospel saints died out 2000 years ago.  This is covered more on the Kingdom Gospel Saints page on this website.</h5></div>
-                <div class="box02gospel"><p></p></div>
-                <div class="boxverseright"><h4></h4><p></p></div>
-                <div class="boxforbutton"><a href="Reading.html" class="button001">The 2 Groups</a></div>
-           
-            </section>
-
-            <section id="section6">
-                <div class="box01Main"><h2>Reading In Context.</h2></div>
-                <div class="box02gospel"><h4></h4><p>Keeping in mind that when you read that Paul wrote to 2 groups and that not everything is addressed to saved people today, we must keep in mind that when we are reading 3 very important things.</p></div>
-                <div class="box02gospel"><h4>Speaker</h4><p>Who has written the text we are reading.  Is it from the apostle Paul?  If it is not written by Paul then it is of no use to us at all.</p>
-                  <h4>Audience</h4><p>Who is Paul writing to in the verses.  Is it Kingdom Gospel Saints, Church of the body of Christ Saints or is it unsaved people?  This is important because if it is addressed  to Kingdom Gospel Saints or unsaved people then it is not for us today.</p>
-                <h4>Context</h4><p>What is the context of the the paragraphs you are reading.  What is Paul speaking about, this is important because the context shows the meaning of what is written.</p>  
-                </div>
-                  
-                
-              </section>
-              <section id="section7">
-                <div class="box01Main"><h2>The Form of sound words</h2></div>
-                <div class="box02gospel"><h4></h4><p>When you are reading you need to rememeber that the words are written in a certain way for a purpose, not only the form, but also the symbols and certain key words that are in the verses</p></div>
-                <div class="box02gospel"><h4>Parenthesis</h4><p>()</p></div>
-                <div class="box02gospel"><p>when reading if a believer doesn't understand that parenthesis depart from the subject,</p></div>
-              </section>
-              <section id="section8">
-                <div class="image-box">
-                  <a href="TheKingJames.html">
-                    <img src="bible1.jpg" alt="Image 1">
-                    <p>The King James Version</p>
-                  </a>
-                  <a href="page2.html">
-                    <img src="bible2.jpg" alt="Image 2">
-                    <p>More on reading</p>
-                  </a>
-                  <a href="page3.html">
-                    <img src="dawn breaking.jpg" alt="Image 3">
-                    <p>The 2 Dispensations</p>
-                  </a>
-                  <a href="page3.html">
-                      <img src="skyview.jpg" alt="Image 3">
-                      <p>Who is God</p>
-                    </a>
-                  <!-- Add more images and links as needed -->
-                </div>
-              </section>
-        </main>
-    </div>
-
-
-    <!--end of Body-->
-    
-  <footer class="footer mt-auto py-3 bg-dark gray text-black">
-    <div class="container text-center">
+    </body>
+    <footer class="footer mt-auto py-3 bg-dark gray text-black">
+<div class="container-fluid text-center px-0">
         <div class="row">
-            <!-- Transparent Box 1 -->
-            <div class="col-md-6 mb-3">
-                <div class="transparent-box">
-                    <p>WhyPaulsGospel.com is affiliated with no other religious groups, churches, cults, sects, websites, teachers and pastors online or otherwise,
-                        We do not condone the use of any other content outside of Paul's scriptures for doctrine, be it books, videos, sermons or audiofiles or any religous music of any kind
-                        We strictly use Paul's scriptures in the King James Version only for doctrine and for individuals who are saved today to know how they can walk and please God.  For more information on our policies visit the Our policies page.
-                    </p>
-                    
-                </div>
-            </div>
+           <div class="col-12">
+        <div class="transparent-box">
+          <p>
+            WhyPaulsGospel.com is affiliated with no other religious groups, churches, cults, sects, websites, teachers and pastors online or otherwise.  
+            We do not condone the use of any other content outside of Paul's scriptures for doctrine, be it books, videos, sermons or audio files or any religious music of any kind.  
+            We strictly use Paul's scriptures in the King James Version only for doctrine and for individuals who are saved today to know how they can walk and please God.  
+            For more information on our policies visit the Our policies page.
+          </p>
+        </div>
+      </div>
+          <!-- Transparent Box 2 -->
+            <div class="col-12 mb-3">
+        <div class="transparent-box">
+          <a href="#" class="logo-link"><img src="facebooklogo.png" alt="Facebook"></a>
+          <a href="#" class="logo-link"><img src="linkedinlogo.png" alt="LinkedIn"></a>
+          <a href="#" class="logo-link"><img src="paltalk logo.png" alt="Paltalk"></a>
+          <a href="#" class="logo-link"><img src="youtube.jpg" alt="YouTube"></a>
+          <a href="#" class="logo-link"><img src="skypelogo.png" alt="Skype"></a>
+          <a href="#" class="logo-link"><img src="discordlogo.png" alt="Discord"></a>
+          <a href="#" class="logo-link"><img src="email.jpg" alt="Email"></a>
+        </div>
+      </div>
+          
             
 
-            <!-- Transparent Box 2 -->
-            <div class="col-md-6">
-                <div class="transparent-box">
-                    
-                    <a href="#" class="logo-link"><img src="facebooklogo.png" alt="Logo 1"></a>
-                    <a href="#" class="logo-link"><img src="linkedinlogo.png" alt="Logo 2"></a>
-                    <a href="#" class="logo-link"><img src="paltalk logo.png" alt="Logo 2"></a>
-                    <a href="#" class="logo-link"><img src="youtube.jpg" alt="Logo 2"></a>
-                    <a href="#" class="logo-link"><img src="skypelogo.png" alt="Logo 2"></a>
-                    <a href="#" class="logo-link"><img src="discordlogo.png" alt="Logo 2"></a>
-                    <a href="#" class="logo-link"><img src="email.jpg" alt="Logo 2"></a>
-                    <!-- Add more logo links as needed -->
-                </div>
-            </div>
+            
         </div>
     </div>
-</footer>
-    <!-- JavaScript and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        const slideButton = document.getElementById('slideButton');
-        const sideNav = document.querySelector('.side-nav');
 
-        slideButton.addEventListener('mouseenter', () => {
-            sideNav.style.left = '0';
-        });
-
-        sideNav.addEventListener('mouseleave', () => {
-            sideNav.style.left = '-250px';
-        });
-    </script>
-
-
-</body>
-
+    </footer>
+    
 </html>
