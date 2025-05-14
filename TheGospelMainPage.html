@@ -775,7 +775,27 @@
 
     <!--end of Body-->
     
-  <footer class="footer mt-auto py-3 bg-dark gray text-black">
+  
+    <!-- JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const slideButton = document.getElementById('slideButton');
+        const sideNav = document.querySelector('.side-nav');
+
+        slideButton.addEventListener('mouseenter', () => {
+            sideNav.style.left = '0';
+        });
+
+        sideNav.addEventListener('mouseleave', () => {
+            sideNav.style.left = '-250px';
+        });
+    </script>
+
+
+</body>
+<footer class="footer mt-auto py-3 bg-dark gray text-black">
     <div class="container text-center">
         <div class="row">
             <!-- Transparent Box 1 -->
@@ -807,24 +827,5 @@
         </div>
     </div>
 </footer>
-    <!-- JavaScript and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        const slideButton = document.getElementById('slideButton');
-        const sideNav = document.querySelector('.side-nav');
-
-        slideButton.addEventListener('mouseenter', () => {
-            sideNav.style.left = '0';
-        });
-
-        sideNav.addEventListener('mouseleave', () => {
-            sideNav.style.left = '-250px';
-        });
-    </script>
-
-
-</body>
 
 </html>
